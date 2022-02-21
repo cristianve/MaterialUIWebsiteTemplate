@@ -80,7 +80,7 @@ export default function GridLayout() {
             >
                 
                 <Container maxWidth="sm" >
-                     <Divider variant="middle" />
+                     <Divider variant="middle" sx={{mt:2}} />
                     <Typography
                         component="h3"
                         variant="h4"

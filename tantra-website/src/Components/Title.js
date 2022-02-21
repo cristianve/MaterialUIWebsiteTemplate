@@ -10,12 +10,27 @@ import Gradient from "rgt";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import Lottie from "react-lottie";
+import BannerBlue from "../assets/images/lottiefiles/line.json";
+
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
 
 export default function Title(props) {
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    width:"100",
+    height:"100",
+    animationData: BannerBlue,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   function printButtons() {
     if (props.primaryButton !== undefined) {
       return (
@@ -26,14 +41,16 @@ export default function Title(props) {
           justifyContent="center"
         >
           <Button
-            style={{ textTransform: "none", fontWeight: "700" }}
+          size="large"
+            style={{ textTransform: "none", fontWeight: "400" }}
             variant="contained"
             endIcon={<ArrowForwardOutlinedIcon />}
           >
             {props.primaryButton}
           </Button>
           <Button
-            style={{ textTransform: "none", fontWeight: "700" }}
+          size="large"
+            style={{ textTransform: "none", fontWeight: "400" }}
             variant="outlined"
           >
             {props.secondaryButton}
@@ -85,7 +102,9 @@ export default function Title(props) {
             </Typography>
 
             {printButtons()}
+            <Lottie options={defaultOptions}   />
           </Container>
+  
         </Box>
       </main>
     </ThemeProvider>

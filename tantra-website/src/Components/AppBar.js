@@ -18,12 +18,21 @@ import { blue } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
+import MenuLenguaje from "./MenuLenguaje.js";
 
 const pages = [
   { name: "Login", link: "/login" },
-  { name: "Login2", link: "/login-2" },
   { name: "Register", link: "/register" },
+  { name: "Recovery Password", link: "/password-reset"},
+  { name: "Account Settings", link: "/account-settings" },
   { name: "Pricing", link: "/pricing" },
+  { name: "Contact Us", link: "/contact" },
+  { name: "Terms", link: "/terms" },
+  { name: "FAQ", link: "/faq" },
+  { name: "Search", link: "/search" },
+  { name: "Products", link: "/products" },
+  { name: "Roadmap", link: "/roadmap" },
+  { name: "404", link: "/error" },
   { name: "About Us", link: "/about" },
 ];
 
@@ -161,7 +170,7 @@ const ResponsiveAppBar = () => {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-
+          <MenuLenguaje/>
           {/** MENU DEVICE */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton

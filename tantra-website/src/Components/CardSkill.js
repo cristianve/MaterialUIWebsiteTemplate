@@ -14,7 +14,7 @@ export default function MediaCard(props) {
 
         <Card sx={{ maxWidth: 345, height: 220, paddingLeft: 2, paddingTop: 2 }} elevation={12}>
             <Avatar
-                sx={{ bgcolor: blue[500], width: 50, height: 50, padding: 1}}
+                sx={{ bgcolor: blue[500], width: 50, height: 50, padding: 1 , marginLeft: 2, marginTop:1}}
                 alt="Remy Sharp"
                 src={props.icon}
             />
