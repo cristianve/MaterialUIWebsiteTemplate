@@ -189,6 +189,7 @@ export default function ContactUs() {
         </Grid>
         <Divider variant="middle" />
         <Typography
+          mt={2}
           component="h2"
           variant="h3"
           align="center"
