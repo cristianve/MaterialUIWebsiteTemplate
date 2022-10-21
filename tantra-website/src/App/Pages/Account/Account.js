@@ -22,7 +22,7 @@ import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-
+import PasswordChange from "./PasswordChange";
 import Button from "@mui/material/Button";
 
 import GoogleMap from "google-map-react";
@@ -110,9 +110,7 @@ export default function Account() {
               fontWeight={400}
               paragraph
             >
-              Rather than worrying about switching offices every couple years,
-              you can instead stay in the same location and grow-up from your
-              shared coworking space to an office that takes up an entire floor.
+              Here you can find all the information about your account like: username, email and creation date. Also you can change your password or delete your current account.
             </Typography>
             <ContactList />
           </Grid>
@@ -133,36 +131,15 @@ export default function Account() {
           </Grid>
         </Grid>
 
-        <Divider variant="middle"/>
-        <Typography
-          mt={2}
-          component="h2"
-          variant="h3"
-          align="left"
-          color="text.primary"
-          fontWeight={700}
-          lineHeight={1.167}
-          gutterBottom
-        >
-          <Gradient dir="left-to-right" from="#007FFF" to="#0059B2">
-            Change Password
-          </Gradient>
-        </Typography>
-        <Typography
-          variant="h6"
-          align="left"
-          color="text.secondary"
-          fontWeight={400}
-          mb={2}
-        >
-          SIMILAR TO RECOVERY PASSWORD
-        </Typography>
+        <Divider variant="middle" />
 
-        <Divider variant="middle"/>
+        <PasswordChange />
+
+        <Divider variant="middle" />
         <Typography
           mt={2}
-          component="h2"
-          variant="h3"
+          component="h4"
+          variant="h5"
           align="left"
           color="text.primary"
           fontWeight={700}
@@ -170,7 +147,7 @@ export default function Account() {
           gutterBottom
         >
           <Gradient dir="left-to-right" from="#007FFF" to="#0059B2">
-            Close account
+            Delete Account
           </Gradient>
         </Typography>
 
@@ -181,25 +158,25 @@ export default function Account() {
           fontWeight={400}
           mb={2}
         >
-          Delete your account and account data. All progress will be dissapear
+          Delete your account and account data. All progress will be dissapear 😭
         </Typography>
         <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
 
-        <Button sx={{justifyContent: "center",mt:2}} size='large' variant="contained" style={{textTransform:"none"}} color="error" >
-          Delete Account
-        </Button>
+          <Button sx={{ justifyContent: "center", mt: 2 }} size='large' variant="contained" style={{ textTransform: "none" }} color="error" >
+            Delete Account
+          </Button>
         </Box>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Divider variant="middle" />
-        
-  
+
+
       </Container>
     </ThemeProvider>
   );
